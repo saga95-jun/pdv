@@ -1,0 +1,130 @@
+.quiz {
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__wrapper {
+        margin-bottom: 84px;
+    }
+    &__descr {
+        margin-bottom: 40px;
+        display: inline-block;
+        max-width: 667px;
+        @media (max-width: '426px') {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__questions {
+        flex: 0 0 687px;
+        @media (max-width: '998px') {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__counter {
+        flex: 0 1 413px;
+        @media (max-width: '998px') {
+            display: none;
+        }
+    }
+
+    &__item {
+        padding: 40px 40px 40px 96px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        margin-bottom: 16px;
+        background: linear-gradient(-18deg, #E9E9EC 61px, #fff 0);
+        @media (max-width: '426px') {
+            padding: 24px 24px 24px 56px;
+            background: #fff;
+        }
+    }
+
+    &__left-text {
+        position: relative;
+    }
+
+
+    &__name {
+        margin-bottom: 24px;
+        position: relative;
+        cursor: pointer;
+        
+    }
+
+    &__text {
+        font-family: "PT-sans", sans-serif;
+        font-size: 16px;
+        line-height: 150%;
+        margin-top: 15px;
+    }
+
+    
+}
+
+.checkbox {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    padding-left: 56px;
+}
+
+.check-style {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #CBCBCD;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: absolute;
+    margin-left: -56px;
+    top: 4px;
+    cursor: pointer;
+    @media (max-width: '426px') {
+        margin-left: -36px;
+    }
+}
+
+.checkbox:checked + .check-style::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #0B7572;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.counter {
+
+    &__title {
+        font-size: 20px;
+        color: #363738;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 150%;
+        border-bottom: 3px solid #FFCE50;
+        padding-bottom: 25px;
+        width: 281px;
+    }
+}
+.count {
+    font-size: 54px;
+    line-height: 150%;
+}
